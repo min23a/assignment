@@ -1,4 +1,4 @@
-
+//https://github.com/min23a/assignment
 
 //1. kilometerToMeter
  
@@ -76,7 +76,7 @@ function hotelCost(days){
 var totalHotelCost = hotelCost(0);
 console.log(totalHotelCost);
 
-// megaFriend
+//4. megaFriend
 
 function megaFriend(names){
     //check's if it is a single named
