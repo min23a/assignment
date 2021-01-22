@@ -1,6 +1,6 @@
 
 
-//kilometerToMeter
+//1. kilometerToMeter
  
 function kilometerToMeter(kilometer){
     var meter = kilometer*1000;
@@ -20,7 +20,7 @@ function kilometerToMeter(kilometer){
 var result = kilometerToMeter(-1);
 console.log(result);
 
-//budgetCalculator
+//2. budgetCalculator
 
 function budgetCalculator(clock, mobile, laptop){
     var total = clock*50 + mobile*100 + laptop*500;
@@ -28,14 +28,18 @@ function budgetCalculator(clock, mobile, laptop){
     if (clock <= -1 || mobile <= -1 || laptop <= -1){
         return "Quantity can't be negative";
     }
+    else if (clock == 0 && mobile == 0 && laptop == 0){
+        return "Please Buy something"
+    }
+    //give the total cost
     else{
         return total;
     }
 }
-var totalBudget = budgetCalculator(1,0,1);
+var totalBudget = budgetCalculator(0,0,0);
 console.log(totalBudget);
 
-//hotelCost
+//3. hotelCost
 
 function hotelCost(days){
     var cost = 0;
@@ -43,7 +47,7 @@ function hotelCost(days){
         return "Days can't have Negative value"
     }
     else if(days == 0){
-        return "Please input value of days > 0"
+        return "Please input value of days you wnat to stay > 0"
     }
     else{
         // 10 days cost.
@@ -59,7 +63,7 @@ function hotelCost(days){
              cost = begining10Days + after10Days;
             return cost;
         }
-        //cost of days > 20 
+        // cost of days > 20 
         else{
             var after20DaysCost = 10 * 100 + 10 * 80;
             var remainingDays = days - 20;
@@ -69,5 +73,28 @@ function hotelCost(days){
         }
     }
 }
-var totalHotelCost = hotelCost(122);
+var totalHotelCost = hotelCost(0);
 console.log(totalHotelCost);
+
+// megaFriend
+
+function megaFriend(names){
+    //check's if it is a single named
+    if (names.length <= 1){
+        return "Please enter 2 or more names in the array to compare";
+    }
+    //gives the result
+    else{
+        var bigger = names[0];
+        for (var i = 0 ; i < names.length; i++){
+            var biggest = names[i];;
+            if (biggest.length > bigger.length){
+                bigger = biggest;
+            }
+        }
+        return bigger;
+    }
+}
+var biggerName = megaFriend([""]);
+console.log(biggerName);
+
